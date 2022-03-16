@@ -3,6 +3,14 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
+    firstname: {
+        type: String,
+        default: ''
+    },
+    lastname: {
+        type: String,
+        default: ''
+    },
     admin: { //when a new user document is created the admin flag will be set to false
         type: Boolean,
         default: false
